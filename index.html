@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Saber Guild Soundboard!</title>
+    <meta name="description" content="Soundboards for saber guild events">
+    <link id="favicon" rel="icon" href="https://hyperdev.com/favicon-app.ico" type="image/x-icon">
+    <script src="https://use.fontawesome.com/3045d47900.js"></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/styles.css">
+  </head>
+  <body>
+    <header class="flex">
+      <img src="assets/images/SGlogoGlobal.png">
+      <h1 class="center">Sound App</h1>
+    </header>
+
+      <audio id = "music" type="audio/mp3">
+        </audio>
+      <section class="flex" id = "player">
+        <div class="flex_child"><p class="bold center" id="title">Select track</p></div>
+
+        <div class="flex flex_child" id="timeline_container">
+          <span class="hidden" id="elapsed">0:00</span><div id="timeline">
+            <div id="playhead"></div>
+          </div><span class = "hidden" id="track_duration">0:00</span>
+        </div>
+
+        <div class="flex_child" id = "button_pad">
+          <button id="dButton" class="delay" onclick="musicPlayer.toggleDelay()"></button>
+          <button  id="rButton" class="repeat" onclick="musicPlayer.toggleRepeat()"></button>
+          <button id="pButton" class="play" onclick="handlers.playHandler()"></button>
+        </div>
+
+
+      </section>
+
+      <section class="flex" id = "music_tracks">
+      <div class = "flex_child track_select" id = "show">
+          <h2 class = "list-header">Scenes</h2>
+          <p class = "track-heading bold lite-up inactive_track" id = "scene1">Jedi Intro</p>
+          <p class = "track-heading bold lite-up inactive_track" id = "scene2">Sith Intro</p>
+          <p class = "track-heading bold lite-up inactive_track" id = "scene3">Conversion</p>
+          <p class = "track-heading bold lite-up inactive_track" id = "scene4">Jedi</p>
+          <p class = "track-heading bold lite-up inactive_track" id = "scene5">End</p>
+        </div>
+      </section>
+    <!-- Your web-app is https, so your scripts need to be too -->
+    <script src="scripts/sound.js"></script>
+
+  </body>
+</html>
